@@ -12,6 +12,8 @@
   --text-gray: #A6A6A6;
   --background: #0a0a0a;
   --foreground: #ededed;
+  --default-font-size: 18px;
+  --border-black: #191A15;
 }
 
 /* @theme inline {
@@ -30,11 +32,15 @@ body {
   overflow-x: hidden;
 }
 
-p {
-  @apply text-[18px] font-bold;
+h3 {
+  @apply text-[2vw] text-(--text-black) font-medium;
 }
 
-.container{
+p {
+  @apply text-[18px] font-medium;
+}
+
+.container {
   @apply max-w-[1250px] mx-auto;
 }
 
@@ -75,4 +81,12 @@ p {
       rgba(255, 255, 255, 0.8),
       transparent,
       rgba(255, 255, 255, 0.3));
+}
+
+.common-cta-btn {
+  @apply text-(--text-white) bg-(--primary-color-light) cursor-pointer border-2 border-transparent hover:border-2 hover:border-(--primary-color-light) hover:bg-transparent hover:text-(--primary-color-light) transition-all;
+}
+
+.play-btn {
+  @apply cursor-pointer flex flex-row items-center gap-3 text-(--default-font-size) border-2 border-(--border-black) rounded-full px-1.5 py-1 bg-transparent!;
 }
