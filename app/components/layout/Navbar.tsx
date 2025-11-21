@@ -1,4 +1,4 @@
-import Logo from "@/app/assets/icons/Logo";
+import Logo from "@/app/assets/icons/logo";
 import Link from "next/link";
 import React from "react";
 

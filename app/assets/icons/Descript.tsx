@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const Descript = () => {
   return (
@@ -12,9 +12,9 @@ const Descript = () => {
       >
         <path
           fill="#a6a6a6"
-          fill-rule="evenodd"
+          fillRule="evenodd"
           d="M17.071 4.417C18.946 5.325 20 6.555 20 7.84H0c0-1.284 1.054-2.514 2.929-3.422C4.804 3.51 7.348 3 10 3s5.196.51 7.071 1.417M2.93 31.583C1.054 30.675 0 29.445 0 28.16h20c0 1.284-1.054 2.514-2.929 3.422C15.196 32.49 12.652 33 10 33s-5.196-.51-7.071-1.417M23 20.419v3.871h-6v-3.87zM6 11.71H0v3.872h6zm5 0h12v3.872H11zm1 8.71H0v3.871h12z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
         <path
           fill="#a6a6a6"
@@ -23,6 +23,6 @@ const Descript = () => {
       </svg>
     </>
   );
-}
+};
 
-export default Descript
+export default Descript;

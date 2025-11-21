@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const Intercom = () => {
   return (
@@ -21,14 +21,14 @@ const Intercom = () => {
         />
         <path
           stroke="#fff"
-          stroke-linecap="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeWidth="2"
           d="M5 27c2.833 2.264 11 5.433 21 0"
         />
         <path fill="#fff" d="M24 10h2v12h-2z" />
       </svg>
     </>
   );
-}
+};
 
-export default Intercom
+export default Intercom;
