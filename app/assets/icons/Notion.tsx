@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const Notion = () => {
   return (
@@ -16,13 +16,13 @@ const Notion = () => {
         />
         <path
           stroke="#a6a6a6"
-          stroke-width="2"
+          strokeWidth="2"
           d="M9 9h28v26H9zM35.339 7l-5.715-5H2.661l5.715 5z"
         />
         <path fill="#a6a6a6" d="M8 8 0 1v28l8 7z" />
       </svg>
     </>
   );
-}
+};
 
-export default Notion
+export default Notion;
