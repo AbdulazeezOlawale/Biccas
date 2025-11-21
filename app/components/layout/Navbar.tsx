@@ -1,4 +1,4 @@
-import Logo from "@/app/assets/icons/logo";
+import Logo from "@/app/assets/icons/Logo";
 import Link from "next/link";
 import React from "react";
 
@@ -43,7 +43,7 @@ const Navbar = ({ className }: navBarProps) => {
         <Logo />
       </div>
       <div className="flex flex-row items-center justify-between flex-1 ">
-        <ul className="flex flex-row items-center justify-center  flex-1">
+        <ul className="flex flex-row items-center justify-center flex-1">
           {linkItems.map((link: LinkItem, index: number) => (
             <li key={index} className="mx-0.5">
               <Link
@@ -69,10 +69,7 @@ const Navbar = ({ className }: navBarProps) => {
             </Link>
           </li>
           <li>
-            <Link
-              href="#"
-              className="px-4 py-2 rounded-[10px] text-(--text-white) bg-(--primary-color-light) border-2 border-transparent hover:border-2 hover:border-(--primary-color-light) hover:bg-transparent hover:text-(--primary-color-light) transition-all"
-            >
+            <Link href="#" className="px-4 py-2 rounded-[10px] common-cta-btn">
               Sign Up
             </Link>
           </li>
