@@ -1,11 +1,11 @@
 import Image from "next/image";
-import BiccasButton from "../../common/button";
 import Play from "@/app/assets/icons/Play";
 import Unsplash from "@/app/assets/icons/Unsplash";
 import Notion from "@/app/assets/icons/Notion";
 import Intercom from "@/app/assets/icons/Intercom";
 import Descript from "@/app/assets/icons/Descript";
 import Grammarly from "@/app/assets/icons/Grammarly";
+import BiccasButton from "../common/button";
 
 const Hero = () => {
 
@@ -29,13 +29,14 @@ const Hero = () => {
 
       <section className="container pt-[calc(24px+66px+8vh)] flex flex-col gap-18">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-8">
-              <h1 className="lg:text-[3vw] font-medium">
-                We’re here to Increase your Productivity
-              </h1>
+              <h1>We’re here to Increase your Productivity</h1>
 
-              <p className="text-(--default-paragraph)">
+              <p
+                style={{ color: "var(--text-black)", fontSize: "18px" }}
+                className="text-(--text-black)"
+              >
                 Let&apos;s make your work more organize and easily using the
                 Taskio Dashboard with many of the latest features in managing
                 work everyday.
@@ -47,8 +48,8 @@ const Hero = () => {
                 title="Try free trial"
                 classname="text-(--default-font-size)"
               />
-              <button className="play-btn">
-                <Play />{" "}
+              <button className="play-btn hover:scale-105 transition-all">
+                <Play />
                 <span className="text-(--text-black) pr-1">View Demo</span>
               </button>
             </div>
@@ -70,8 +71,8 @@ const Hero = () => {
             <h3 className="">More than 25,000 teams use Collabs</h3>
           </div>
           <div className="flex flex-row gap-8">
-            {partnerComponents.map((item:partnerType) => (
-              <item.Component key={item.id}/>
+            {partnerComponents.map((item: partnerType) => (
+              <item.Component key={item.id} />
             ))}
           </div>
         </div>
