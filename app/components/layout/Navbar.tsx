@@ -36,7 +36,7 @@ const Navbar = ({ className }: navBarProps) => {
   ];
 
   return (
-    <section
+    <nav
       className={`container flex flex-row items-center justify-between flex-1 py-5 px-3 ${className} nav-glass-card`}
     >
       <div className="logo cursor-pointer">
@@ -75,7 +75,7 @@ const Navbar = ({ className }: navBarProps) => {
           </li>
         </ul>
       </div>
-    </section>
+    </nav>
   );
 };
 
