@@ -5,7 +5,7 @@ import Notion from "@/app/assets/icons/Notion";
 import Intercom from "@/app/assets/icons/Intercom";
 import Descript from "@/app/assets/icons/Descript";
 import Grammarly from "@/app/assets/icons/Grammarly";
-import BiccasButton from "../common/button";
+import BiccasButton from "../common/BiccasButton";
 
 const Hero = () => {
 
