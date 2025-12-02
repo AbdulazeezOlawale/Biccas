@@ -56,7 +56,7 @@ p {
   @apply py-[8vh];
 }
 .container {
-  @apply max-w-[1250px] mx-auto;
+  @apply sm:max-w-[1250px] sm:w-[90%] w-[90%] mx-auto;
 }
 
 .nav-glass-card {
@@ -104,4 +104,19 @@ p {
 
 .play-btn {
   @apply cursor-pointer flex flex-row items-center gap-3 text-(--default-font-size) border-2 border-(--border-black) rounded-full px-1.5 py-1 bg-transparent!;
+}
+
+.open-modal {
+  transform: translateY(0%);
+  opacity: 1;
+  visibility: visible;
+  transition: all 500ms ease-in-out;
+}
+
+.close-modal {
+  transform: translateY(-20%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 500ms ease-in-out;
+  z-index: -9;
 }
