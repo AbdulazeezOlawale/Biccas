@@ -33,30 +33,35 @@ body {
 }
 
 h1 {
-  @apply lg:text-[3vw] font-medium;
+  @apply text-[7.5vw] md:text-[5vw] lg:text-[4vw] 2xl:text-[3vw] font-semibold text-center lg:text-left;
 }
 
 h2 {
-  @apply text-[2.2vw] font-medium;
+  @apply text-[6vw] md:text-[4vw] lg:text-[3vw] xl:text-[2vw] 2xl:text-[2.2vw] font-medium ;
 }
 
 h3 {
-  @apply text-[2vw] text-(--text-black) font-medium;
+  @apply text-[6vw] md:text-[4vw] lg:text-[3vw] xl:text-[2vw] 2xl:text-[2.2vw] text-(--text-black) font-medium text-center lg:text-left;
 }
 
 h4 {
-  @apply text-[1.3vw] text-(--text-black) font-bold;
+  @apply text-[5vw] md:text-[3.3vw] lg:text-[2.5vw] xl:text-[2vw] 2xl:text-[1.3vw] text-(--text-black) font-semibold ;
 }
 
 p {
-  @apply text-[16px] font-medium leading-7.5 text-(--text-gray);
+  @apply text-[15px] sm:text-[16px] font-medium leading-7.5 text-(--text-gray);
 }
 
 .container-space {
-  @apply py-[8vh];
+  @apply py-[4vh] sm:py-[8vh];
 }
+
 .container {
-  @apply sm:max-w-[1250px] sm:w-[90%] w-[90%] mx-auto;
+  @apply md:max-w-[1250px] w-[95%] sm:w-[90%] mx-auto; 
+}
+
+.mobile-paragraph{
+  @apply text-center md:text-left;
 }
 
 .nav-glass-card {
@@ -103,7 +108,7 @@ p {
 }
 
 .play-btn {
-  @apply cursor-pointer flex flex-row items-center gap-3 text-(--default-font-size) border-2 border-(--border-black) rounded-full px-1.5 py-1 bg-transparent!;
+  @apply cursor-pointer flex flex-row items-center gap-3 text-(--default-font-size) border-2 border-(--border-black) rounded-full px-1.5 py-0.5 bg-transparent!;
 }
 
 .open-modal {
@@ -119,4 +124,10 @@ p {
   visibility: hidden;
   transition: all 500ms ease-in-out;
   z-index: -9;
+}
+
+@media (min-width: 2001px) {
+  .hero{
+    @apply h-[70vh]
+  }
 }
