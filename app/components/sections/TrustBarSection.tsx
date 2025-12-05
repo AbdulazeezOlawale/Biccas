@@ -74,21 +74,21 @@ const TrustBarSection = () => {
 
   return (
     <section className="bg-[#F9F8FE] container-space">
-      <div className="container flex gap-16">
+      <div className="container flex flex-col md:flex-row gap-16 ">
         <div className="flex flex-col gap-10 flex-1">
           <div className="flex flex-col gap-6">
             <h2>How we support our pratner all over the world</h2>
-            <p>
+            <p className="mobile-paragraph">
               SaaS become a common delivery model for many business application,
               including office software, messaging software, payroll processing
               software, DBMS software, management software
             </p>
           </div>
 
-          <div className="flex gap-16">
+          <div className="flex justify-center md:justify-start gap-16">
             {ratingData.map((item: ratingDataType, index) => {
               return (
-                <div key={index} className="">
+                <div key={index} className="flex items-center flex-col justify-center">
                   <span className="flex gap-2 mb-4">
                     <RatingDisplay maxStars={5} rating={item.rating} />
                   </span>

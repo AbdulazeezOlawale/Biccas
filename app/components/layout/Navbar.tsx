@@ -41,11 +41,11 @@ const Navbar = ({ navStyles }: navBarProps) => {
   ];
 
   return (
-    <div className="relative">
+    <>
       <nav
-        className={`container flex flex-row items-center justify-between flex-1 py-5 px-3 nav-glass-card ${navStyles}`}
+        className={`container flex flex-row items-center justify-between flex-1 py-2 md:py-3 lg:py-5 px-3 nav-glass-card ${navStyles}`}
       >
-        <div className="logo cursor-pointer">
+        <div className="logo cursor-pointer -translate-x-2.5 sm:translate-x-0 scale-80 sm:scale-100">
           <Logo />
         </div>
 
@@ -98,7 +98,7 @@ const Navbar = ({ navStyles }: navBarProps) => {
       </nav>
 
       <div
-        className={`fixed z-50 top-28 left-[50%] translate-x-[-50%] container nav-glass-card md:hidden rounded-[22px] py-5 px-3 ${
+        className={`fixed z-50 top-15 left-[50%] translate-x-[-50%] container nav-glass-card md:hidden rounded-md py-5 px-3 ${
           openModal === true ? "open-modal" : "close-modal"
         }`}
         style={{ background: "white" }}
@@ -128,13 +128,16 @@ const Navbar = ({ navStyles }: navBarProps) => {
             </Link>
           </li>
           <li className="border-t border-(--foreground) pt-2 w-full flex">
-            <Link href="#" className="px-4 py-2 rounded-[10px] common-cta-btn w-full">
+            <Link
+              href="#"
+              className="px-4 py-2 rounded-[10px] common-cta-btn w-full"
+            >
               Sign Up
             </Link>
           </li>
         </ul>
       </div>
-    </div>
+    </>
   );
 };
 
