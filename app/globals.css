@@ -41,7 +41,7 @@ h2 {
 }
 
 h3 {
-  @apply text-[6vw] md:text-[4vw] lg:text-[3vw] xl:text-[2vw] 2xl:text-[2.2vw] text-(--text-black) font-medium text-center lg:text-left;
+  @apply text-[6vw] md:text-[4vw] lg:text-[3vw] xl:text-[2vw] 2xl:text-[2.2vw] text-(--text-black) font-semibold text-center lg:text-left;
 }
 
 h4 {
