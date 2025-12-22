@@ -1,13 +1,44 @@
 "use client";
 
+import { Check } from "lucide-react";
 import { useState } from "react";
 
-
 const ChoosePlan = () => {
-    const [active, setActive] = useState("monthly");
+  const [active, setActive] = useState("monthly");
+  const [hover, setHover] = useState<number | null>(null)
+
+  const planData = [
+    {
+      header: "Free",
+      desc: "Have a go and test your superpowers",
+      price: 0,
+      itemList: [
+        "2 Users", "2 Files", "Public Share & Comments", "Chat Support", "New Income Apps"
+      ],
+      buttonText: "Sign Up for free"
+    },
+    {
+      header: "Free",
+      desc: "Have a go and test your superpowers",
+      price: 0,
+      itemList: [
+        "2 Users", "2 Files", "Public Share & Comments", "Chat Support", "New Income Apps"
+      ],
+      buttonText: "Sign Up for free"
+    },
+    {
+      header: "Free",
+      desc: "Have a go and test your superpowers",
+      price: 0,
+      itemList: [
+        "2 Users", "2 Files", "Public Share & Comments", "Chat Support", "New Income Apps"
+      ],
+      buttonText: "Sign Up for free"
+    },
+  ];
 
   return (
-    <section className="container container-space flex flex-col items-center justify-center gap-8">
+    <section className="container container-space flex flex-col items-center justify-center gap-12">
       <div className="flex flex-col items-center justify-center gap-4">
         <h2>Choose Plan That’s Right For You</h2>
         <span>
@@ -19,7 +50,6 @@ const ChoosePlan = () => {
         className="relative flex flex-row items-center bg-gray-100 rounded-xl p-1 shadow-inner cursor-pointer"
         onClick={() => setActive(active === "monthly" ? "annually" : "monthly")}
       >
-
         <div
           className={`absolute top-1 bottom-1 left-1 w-[calc(50%-4px)] bg-white rounded-lg shadow-md transition-all duration-300 ease-in-out z-0
             ${active === "annually" ? "translate-x-full" : "translate-x-0"}`}
@@ -48,10 +78,47 @@ const ChoosePlan = () => {
         </button>
       </div>
 
-      <div>
-        <div>
-            <h4>Monthly</h4>
-        </div>
+      <div className="flex flex-row items-center justify-center gap-7">
+        {planData.map((planItem, index) => (
+          <div
+            key={index}
+            className={`flex flex-col gap-8 shadow-lg inset-shadow-2xs p-5 rounded-[20px] transition-all duration-300 ease-in-out ${
+              hover === index
+                ? "scale-105 shadow-xl z-10 transition-all duration-300 ease-in-out"
+                : ""
+            } ${
+              hover !== null && hover !== index
+                ? "scale-95 opacity-60 transition-all duration-300 ease-in-out"
+                : ""
+            }`}
+            onMouseEnter={() => setHover(index)}
+            onMouseLeave={() => setHover(null)}
+          >
+            <div className="flex flex-col gap-4 items-center text-center">
+              <h4>{planItem.header}</h4>
+              <p>{planItem.desc}</p>
+              <div className="flex flex-row gap-0">
+                <sup>$</sup>
+                <span className="text-3xl">{planItem.price}</span>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-3 bg-[#F9FAFB] p-9 rounded-[10px] shadow-inner">
+              {planItem.itemList.map((item, index) => (
+                <li key={index} className="flex items-center gap-4">
+                  <span className="h-6 w-6 flex items-center justify-center bg-(--primary-color-light) text-white rounded-full">
+                    <Check className="scale-75" />
+                  </span>
+                  <p className="text-black!">{item}</p>
+                </li>
+              ))}
+
+              <button className="px-6 py-3 bg-white shadow-md rounded-[10px] capitalize text-[18px] text-(--primary-color) hover:text-white hover:bg-(--primary-color-light) transition-all duration-300 cursor-pointer ease-in-out">
+                button text
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
