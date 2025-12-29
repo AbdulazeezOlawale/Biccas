@@ -3,4 +3,5 @@ export type IconProps = {
   height?: number;
   className?: string;
   fill?: string;
+  stroke?: string;
 };

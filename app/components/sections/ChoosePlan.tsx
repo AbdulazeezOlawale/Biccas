@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const ChoosePlan = () => {
   const [active, setActive] = useState("monthly");
-  const [hover, setHover] = useState<number | null>(null)
+  const [hover, setHover] = useState<number | null>(null);
 
   const planData = [
     {
@@ -13,27 +13,39 @@ const ChoosePlan = () => {
       desc: "Have a go and test your superpowers",
       price: 0,
       itemList: [
-        "2 Users", "2 Files", "Public Share & Comments", "Chat Support", "New Income Apps"
+        "2 Users",
+        "2 Files",
+        "Public Share & Comments",
+        "Chat Support",
+        "New income apps",
       ],
-      buttonText: "Sign Up for free"
+      buttonText: "Signup for free",
     },
     {
-      header: "Free",
-      desc: "Have a go and test your superpowers",
-      price: 0,
+      header: "Pro",
+      desc: "Experiment the power of infinite possibilities",
+      price: 8,
       itemList: [
-        "2 Users", "2 Files", "Public Share & Comments", "Chat Support", "New Income Apps"
+        "4 Users",
+        "All apps",
+        "Unlimited editable exports",
+        "Folders and collaboration",
+        "All incoming apps",
       ],
-      buttonText: "Sign Up for free"
+      buttonText: "Go to pro",
     },
     {
-      header: "Free",
-      desc: "Have a go and test your superpowers",
-      price: 0,
+      header: "Business",
+      desc: "Unveil new superpowers and join the Design League",
+      price: 16,
       itemList: [
-        "2 Users", "2 Files", "Public Share & Comments", "Chat Support", "New Income Apps"
+        "All the features of pro plan",
+        "Account success Manager",
+        "Single Sign-On (SSO)",
+        "Co-conception pogram",
+        "Collaboration-Soon",
       ],
-      buttonText: "Sign Up for free"
+      buttonText: "Go to Business",
     },
   ];
 
@@ -78,11 +90,11 @@ const ChoosePlan = () => {
         </button>
       </div>
 
-      <div className="flex flex-row items-center justify-center gap-7">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {planData.map((planItem, index) => (
           <div
             key={index}
-            className={`flex flex-col gap-8 shadow-lg inset-shadow-2xs p-5 rounded-[20px] transition-all duration-300 ease-in-out ${
+            className={`flex flex-col gap-8 flex-1 shadow-lg inset-shadow-2xs p-5 rounded-[20px] transition-all duration-300 ease-in-out justify-between ${
               hover === index
                 ? "scale-105 shadow-xl z-10 transition-all duration-300 ease-in-out"
                 : ""
@@ -103,7 +115,7 @@ const ChoosePlan = () => {
               </div>
             </div>
 
-            <div className="flex flex-col gap-3 bg-[#F9FAFB] p-9 rounded-[10px] shadow-inner">
+            <div className="flex flex-col justify-baseline gap-3 bg-[#F9FAFB] p-9 rounded-[10px] shadow-inner">
               {planItem.itemList.map((item, index) => (
                 <li key={index} className="flex items-center gap-4">
                   <span className="h-6 w-6 flex items-center justify-center bg-(--primary-color-light) text-white rounded-full">
@@ -113,8 +125,8 @@ const ChoosePlan = () => {
                 </li>
               ))}
 
-              <button className="px-6 py-3 bg-white shadow-md rounded-[10px] capitalize text-[18px] text-(--primary-color) hover:text-white hover:bg-(--primary-color-light) transition-all duration-300 cursor-pointer ease-in-out">
-                button text
+              <button className="px-6 py-3 bg-white shadow-md rounded-[10px] capitalize text-[16px] text-(--primary-color) hover:text-white hover:bg-(--primary-color-light) transition-all duration-300 cursor-pointer ease-in-out">
+                {planItem.buttonText}
               </button>
             </div>
           </div>
