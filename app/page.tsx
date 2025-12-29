@@ -1,5 +1,6 @@
 import Benefits from "./components/sections/Benefits";
 import ChoosePlan from "./components/sections/ChoosePlan";
+import Footer from "./components/sections/Footer";
 import Hero from "./components/sections/Hero";
 import Partner from "./components/sections/Partner";
 import ProductFeatures from "./components/sections/ProductFeatures";
@@ -14,6 +15,7 @@ export default function Home() {
       <ProductFeatures/>
       <Benefits/>
       <ChoosePlan/>
+      <Footer/>
     </>
   );
 }

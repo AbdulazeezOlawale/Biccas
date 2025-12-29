@@ -23,7 +23,7 @@ const Benefits = () => {
 
   return (
     <section className="container container-space flex flex-col md:flex-row gap-16 justify-between">
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 justify-center">
         <h2>What Benifit Will You Get</h2>
 
         <ul className="flex flex-col gap-4">
@@ -38,12 +38,12 @@ const Benefits = () => {
         </ul>
       </div>
 
-      <div className="scale-125">
+      <div className="h-full w-full overflow-hidden">
         <Image
-          src="/images/benefit-img.png"
-          alt="product image"
+          src="/images/hero-desktop.png"
+          alt="Hero"
           width={1404}
-          height={1118}
+          height={118}
           style={{ objectFit: "contain" }}
           sizes="(max-width: 300px) 300px, (max-width: 768px) 768px, 1280px"
           className="h-full w-full"

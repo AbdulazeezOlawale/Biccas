@@ -1,7 +1,12 @@
 import { IconProps } from '@/app/types/icon-types'
 import React from 'react'
 
-const Play: React.FC<IconProps> = ({width="40", height="40", className}) => {
+const Play: React.FC<IconProps> = ({
+  width = "40",
+  height = "40",
+  className,
+  stroke = "#191a15",
+}) => {
   return (
     <>
       <svg
@@ -13,7 +18,7 @@ const Play: React.FC<IconProps> = ({width="40", height="40", className}) => {
         className={className}
       >
         <path
-          stroke="#191a15"
+          stroke={stroke}
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="1.5"
@@ -21,7 +26,7 @@ const Play: React.FC<IconProps> = ({width="40", height="40", className}) => {
           clipRule="evenodd"
         />
         <path
-          stroke="#191a15"
+          stroke={stroke}
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="1.5"
@@ -31,6 +36,6 @@ const Play: React.FC<IconProps> = ({width="40", height="40", className}) => {
       </svg>
     </>
   );
-}
+};
 
 export default Play
