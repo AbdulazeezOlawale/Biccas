@@ -77,7 +77,7 @@ const TrustBarSection = () => {
       <div className="container flex flex-col md:flex-row gap-16 ">
         <div className="flex flex-col gap-10 flex-1">
           <div className="flex flex-col gap-6">
-            <h2>How we support our pratner all over the world</h2>
+            <h2>How we support our partner all over the world</h2>
             <p className="mobile-paragraph">
               SaaS become a common delivery model for many business application,
               including office software, messaging software, payroll processing

@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="relative">
         <Providers>
-          <Navbar navStyles="z-50 fixed top-3 sm:top-6 left-[50%] translate-x-[-50%] rounded-[4px] sm:rounded-[22px]" />
+          <Navbar navStyles="z-50" />
           {children}
         </Providers>
       </body>

@@ -1,16 +1,29 @@
 import Image from "next/image";
 import Play from "@/app/assets/icons/Play";
 import BiccasButton from "../common/BiccasButton";
+import { useScrollStore } from "@/app/store/ScrollStore";
 
 const Hero = () => {
+  const hidden = useScrollStore((state) => state.hidden);
+  const scrollY = useScrollStore((state) => state.scrollY);
 
+  let navClass = "";
+
+  if (hidden && scrollY > 60) {
+    navClass = "pt-66px transition-all ease-in-out duration-300";
+  } else if (!hidden && scrollY > 60) {
+    navClass = "pt-66px transition-all ease-in-out duration-300";
+  } else if (!hidden && scrollY < 60) {
+    navClass = "";
+  }
 
   return (
-    <header className="h-dvh lg:h-[80vh] xl:h-dvh w-dvw relative overflow-hidden flex lg:align-middle lg:justify-center lg:items-center hero">
-      <div className="absolute inset-0 -z-50 bg-[radial-gradient(circle_at_top_left,#54be96_-60%,#fffafc_30%)]"></div>
-      <div className="absolute -z-50 w-[50%] right-0 h-dvh bg-[radial-gradient(circle_at_center_right,#54be96_-90%,#fffafc_40%)]"></div>
+    <header className="h-dvh md:py-16 lg:h-[80vh] w-full relative overflow-hidden flex lg:align-middle lg:justify-center lg:items-center hero">
+      {/* Background gradients */}
+      <div className="absolute -top-1/6 -left-1/12 h-[500px] w-[500px] rounded-full bg-(--primary-color)/15 blur-3xl" />
+      <div className="absolute -bottom-1/6 -right-1/12 h-[600px] w-[600px] rounded-full bg-(--primary-color)/15 blur-3xl" />
 
-      <section className="container pt-[calc(24px+36px)] md:pt-[calc(24px+66px+3vh)] lg:pt-[calc(24px+66px+1vh)] flex justify-around">
+      <section className={`container ${navClass} flex justify-around`}>
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-2 sm:gap-12">
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-6 lg:gap-8">

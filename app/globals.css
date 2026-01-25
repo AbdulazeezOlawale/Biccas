@@ -33,11 +33,11 @@ body {
 }
 
 h1 {
-  @apply text-[7.5vw] md:text-[5vw] lg:text-[4vw] 2xl:text-[3vw] font-semibold text-center lg:text-left;
+  @apply text-[7vw] md:text-[5vw] lg:text-[4vw] 2xl:text-[3vw] font-semibold text-center lg:text-left;
 }
 
 h2 {
-  @apply text-[6vw] md:text-[4vw] lg:text-[3vw] xl:text-[2vw] 2xl:text-[2.2vw] font-medium ;
+  @apply text-[6vw] text-center md:text-left md:text-[4vw] lg:text-[3vw] xl:text-[2vw] 2xl:text-[2.2vw] font-medium;
 }
 
 h3 {
@@ -45,11 +45,11 @@ h3 {
 }
 
 h4 {
-  @apply text-[5vw] md:text-[3.3vw] lg:text-[2.5vw] xl:text-[2vw] 2xl:text-[1.3vw] text-(--text-black) font-semibold ;
+  @apply text-[5vw] md:text-[3vw] lg:text-[2.5vw] xl:text-[2vw] 2xl:text-[1.3vw] text-(--text-black) font-semibold;
 }
 
 p {
-  @apply text-[15px] sm:text-[16px] font-medium leading-7.5 text-(--text-gray);
+  @apply text-[15px] sm:text-[16px] font-medium leading-4 md:leading-7.5 text-(--text-gray);
 }
 
 .container-space {
@@ -57,10 +57,10 @@ p {
 }
 
 .container {
-  @apply md:max-w-[1250px] w-[95%] sm:w-[90%] mx-auto; 
+  @apply md:max-w-[1250px] w-[95%] sm:w-[90%] mx-auto;
 }
 
-.mobile-paragraph{
+.mobile-paragraph {
   @apply text-center md:text-left;
 }
 
@@ -108,7 +108,7 @@ p {
 }
 
 .play-btn {
-  @apply cursor-pointer flex flex-row items-center gap-3 text-(--default-font-size) border-2 border-(--border-black) rounded-full px-1.5 py-0.5 bg-transparent!;
+  @apply cursor-pointer flex flex-row items-center gap-3 text-(--default-font-size) border-2 border-(--border-black) rounded-full px-1.5 py-0.5 !bg-transparent;
 }
 
 .open-modal {
@@ -127,7 +127,7 @@ p {
 }
 
 @media (min-width: 2001px) {
-  .hero{
+  .hero {
     @apply h-[70vh]
   }
 }
