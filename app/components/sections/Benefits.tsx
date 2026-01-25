@@ -22,11 +22,11 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="container container-space flex flex-col md:flex-row gap-16 justify-between">
+    <section className="container flex flex-col md:flex-row gap-16 justify-between">
       <div className="flex flex-col gap-6 justify-center">
-        <h2>What Benifit Will You Get</h2>
+        <h2 className="text-left!">What Benefit Will You Get</h2>
 
-        <ul className="flex flex-col gap-4">
+        <ul className="flex flex-col gap-4 ">
           {benefitsData.map((item, index) => (
             <li key={index} className="flex items-center gap-4">
               <span className="h-7 w-7 flex items-center justify-center bg-(--primary-color-light) text-white rounded-full">
@@ -38,7 +38,7 @@ const Benefits = () => {
         </ul>
       </div>
 
-      <div className="h-full w-full overflow-hidden">
+      <div className="h-full w-full overflow-hidden hidden lg:block">
         <Image
           src="/images/hero-desktop.png"
           alt="Hero"

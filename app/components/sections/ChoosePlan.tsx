@@ -52,9 +52,9 @@ const ChoosePlan = () => {
   return (
     <section className="container container-space flex flex-col items-center justify-center gap-12">
       <div className="flex flex-col items-center justify-center gap-4">
-        <h2>Choose Plan That’s Right For You</h2>
-        <span>
-          Choose plan that works best for you, feel free to contact us
+        <h2>Choose A Plan That’s Right For You</h2>
+        <span className="text-center md:text-left">
+          Choose a plan that works best for you, feel free to contact us
         </span>
       </div>
 
@@ -90,7 +90,7 @@ const ChoosePlan = () => {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {planData.map((planItem, index) => (
           <div
             key={index}

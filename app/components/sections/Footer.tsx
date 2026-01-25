@@ -47,9 +47,9 @@ const Footer = () => {
   return (
     <footer className="bg-[#161C28] flex flex-col gap-10">
       <section className="container container-space">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           <div className="flex flex-col gap-4">
-            <h3 className="text-white!">
+            <h3 className="text-white! text-left!">
               What people are saying about{" "}
               <span className="text-(--primary-color)">Biccas</span>
             </h3>
@@ -122,26 +122,28 @@ const Footer = () => {
       </section>
 
       <section className="container container-space flex flex-col gap-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div className="flex flex-col justify-between">
-            <Logo />
-            <p>Get started now try our product</p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <div className="flex flex-col justify-between gap-4 lg:gap-0">
+            <div className="flex flex-col gap-2">
+              <Logo />
+              <p>Get started now try our product</p>
+            </div>
 
-            <div className="border border-white w-[410px] flex flex-row rounded-full overflow-hidden relative">
+            <div className="border border-white md:w-[410px] flex flex-row rounded-full overflow-hidden relative">
               <input
                 type="text"
                 placeholder="Enter your email here"
-                className="placeholder:text-lg placeholder:text-(--text-gray) py-4 indent-4 w-full h-full text-white pr-[56px]"
+                className="placeholder:text-lg placeholder:text-(--text-gray) py-4 indent-4 w-full h-full text-white pr-14"
               />
               <div className="absolute top-[50%] -translate-[50%] -right-4.5">
-                <button className="bg-(--primary-color) size-12 rounded-full flex items-center justify-center border border-transparent hover:bg-transparent hover:border hover:border-(--primary-color) transition-all ease-in-out cursor-pointer">
+                <button className="bg-(--primary-color) size-11 md:size-12 rounded-full flex items-center justify-center border border-transparent hover:bg-transparent hover:border hover:border-(--primary-color) transition-all ease-in-out cursor-pointer">
                   <MoveRight className="text-white" />
                 </button>
               </div>
             </div>
           </div>
 
-          <div className="flex flex-row items-center justify-between">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 md:gap-0">
             {footerLinks.map((item, index) => (
               <div key={index} className="flex flex-col gap-6">
                 <span className="text-white text-lg">{item.header}</span>
@@ -160,7 +162,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <section className="flex flex-row items-center justify-between translate-y-8">
+        <section className="flex flex-col lg:flex-row items-start md:items-center gap-0 md:gap-2 justify-between translate-y-6">
           <p className="text-white">
             &copy; {currentYear} Biccas Inc. Copyright and rights reserved
           </p>
